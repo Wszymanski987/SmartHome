@@ -1,8 +1,12 @@
 import react from 'react';
 
-const List {
+const List = () => {
     return (
-        
+        <li>
+            <ul>SmartBulb</ul>
+            <ul>SmartOutlet</ul>
+            <ul>SmartTemperatureSensor</ul>
+        </li>
     );
 };
 
