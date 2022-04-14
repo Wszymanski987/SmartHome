@@ -1,5 +1,5 @@
-// SmartDeviceDetails => SmartBulb;  SmartTemperatureSensor;
-// SmartDeviceDetails =>
+// SmartDeviceDetails => SmartBulb, SmartOutlet or SmartTemperatureSensor;
+
 // SmartDevice:
 // {
 //     type: string; // 'bulb', 'outlet' or 'temperatureSensor'; 
@@ -7,28 +7,38 @@
 //     name: string;
 // }
 
-// SmartBulb: {
-//     type: 'bulb';
-//     id: string;
-//     name: string;
-//     isTurnedOn: boolean;
-//     brightness: number; // <0, 100> 
-//     color: string; // in the CSS formats
-// }
+let SmartBulb  = {
+    type: "bulb",
+    id: "bulb",
+    name: "Your Smart Bulb",
+    isTurnedOn: true,
+    brightness: 10 // <0, 100> 
+    //color:  // in the CSS formats
+}
 
-// SmartOutlet:
-// {
-//     type: 'outlet';
-//     id: string;
-//     name: string;
-//     isTurnedOn: boolean;
-//     powerConsumption: number; // in watts
-// }
+let SmartOutlet = {
+    type: "outlet",
+    id: "outlet",
+    name: "Your Smart Outlet",
+    isTurnedOn: true,
+    powerConsumption: 100 // in watts
+}
 
-// SmartTemperatureSensor:
-// {
-//     type: 'temperatureSensor';
-//     id: string;
-//     name: string;
-//     temperature: number; // in Celsius
-// }
+let SmartTemperatureSensor = {
+    type: 'temperatureSensor',
+    id: "sensor",
+    name: "Your Smart Temperature Sensor",
+    temperature: 20 // in Celsius
+}
+
+let tab = [SmartBulb, SmartOutlet, SmartTemperatureSensor]
+
+const SmartDevice = () => {
+    return (
+        <div>
+            tab;
+        </div>
+    );
+}
+
+export default SmartDevice;

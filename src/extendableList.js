@@ -8,7 +8,7 @@ const S = {
     StyledList: styled.div`
         display: flex;
         flex-direction: column;
-        background-color: blue;
+        background-color: #ffffff;
         color: red;
         padding: 18px;
         width: fit-content;
@@ -17,12 +17,7 @@ const S = {
         outline: none;
         font-size: 15px;
         >button  {
-            width: 200px;
-            cursor: pointer;
-            tranistion: 1s;
-            :hover {
-                opacity: 0.8;
-            }
+            width: 200px;      
         }
       
     `

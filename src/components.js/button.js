@@ -5,8 +5,12 @@ const S = {
     StyledButton: styled.button`
         height: 20px;
         width: 20px;
-        color: red;
-    
+        box-sizing: border-box;
+        cursor: pointer;
+            tranistion: 1s;
+            :hover {
+                opacity: 0.8;
+            }
     `
 };
 
