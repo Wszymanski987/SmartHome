@@ -28,7 +28,7 @@ const ExtendableList = () => {
     return (
         <S.StyledList>
             <Button onClick={() => setOpen(open => !open)} text = "Smart Devices" />
-            {open === true ? <List /> : null} 
+            {open && <List /> } 
         </S.StyledList>
         
     );
