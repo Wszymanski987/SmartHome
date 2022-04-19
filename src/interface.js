@@ -1,7 +1,8 @@
-import react from "react";
+import react, {useState} from "react";
 import styled from "styled-components";
 
 import ExtendableList from "./extendableList";
+import { DEVICES } from "./mock/devices";
 
 const S = {
     Wrapper: styled.div`
@@ -16,9 +17,14 @@ const S = {
 }
 
 const Interface = () => {
+    const [clickedDevice, setClickedDevice] = useState("Your Smart Bulb");
+
     return(
         <S.Wrapper>
-            <ExtendableList />
+            <ExtendableList setClickedDevice = {setClickedDevice} />
+            <div>
+                Szczegóły urządzeń: {clickedDevice}
+            </div>
         </S.Wrapper>       
     );
 };
