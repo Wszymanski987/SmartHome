@@ -21,7 +21,7 @@ const Interface = () => {
     return(
         <S.Wrapper>
             <ExtendableList setClickedDevice = {setClickedDevice} />
-            <DevicesDetails device={clickedDevice} />
+            {clickedDevice && <DevicesDetails device={clickedDevice} />}
         </S.Wrapper>       
     );
 };
