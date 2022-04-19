@@ -1,10 +1,11 @@
 import { useState } from "react";
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 
 import Button from "./components/button";
-import List from "./list";
+import Lists from "./list";
 
-const BasicStyles = css`
+const S = {
+  Wrapper: styled.div`
   background-color: #ffffff;
   color: red;
   padding: 18px;
@@ -14,30 +15,19 @@ const BasicStyles = css`
   outline: none;
   font-size: 15px;
   display: flex;
-`;
-
-const S = {
-  StyledList: styled.div`
-    ${BasicStyles};
-    flex-direction: column;
-
-    > button {
+  flex-direction: column;
+  > button {
       width: 200px;
     }
-  `,
-  Wrapper: styled.div`
-    ${BasicStyles};
   `,
 };
 
 const ExtendableList = ({setClickedDevice}) => {
   const [open, setOpen] = useState(false);
   return (
-    <S.Wrapper>
-      <S.StyledList>
+     <S.Wrapper>
         <Button onClick={() => setOpen((open) => !open)} text="Smart Devices" />
-        {open && <List open={open} setClickedDevice={setClickedDevice} />}
-      </S.StyledList>
+        {open && <Lists setClickedDevice={setClickedDevice} />}
     </S.Wrapper>
   );
 };

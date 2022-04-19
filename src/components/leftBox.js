@@ -1,8 +1,8 @@
-import react from 'react';
+
 
 const LeftBox = () => {
     return (
-
+        <div></div>
     );
 }
 

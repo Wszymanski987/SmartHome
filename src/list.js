@@ -1,13 +1,17 @@
 import { DEVICES } from "./mock/devices";
 
-const List = ({ open, setClickedDevice }) => {
-  return (
+const Lists = ({ setClickedDevice }) => {
+  return ( 
+    <div>
+
     <li>
       {DEVICES.map((item, index) => (
-        <ul onClick={() => setClickedDevice(item.name)} key={index}>{item.name}</ul>
+        <ul onClick={() => setClickedDevice(item)} key={index}>{item.name}</ul>
       ))}
     </li>
+    </div>     
+    
   );
 };
 
-export default List;
+export default Lists;
