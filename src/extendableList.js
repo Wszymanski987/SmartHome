@@ -1,12 +1,15 @@
 import { useState } from "react";
 import styled from "styled-components";
 
+
 import Button from "./components/button";
 import Lists from "./list";
 
+
+
 const S = {
   Wrapper: styled.div`
-  background-color: #ffffff;
+  background-color: #282c34;
   color: red;
   padding: 18px;
   width: fit-content;
@@ -33,3 +36,5 @@ const ExtendableList = ({setClickedDevice}) => {
 };
 
 export default ExtendableList;
+
+

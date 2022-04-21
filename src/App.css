@@ -34,6 +34,10 @@ body {
   justify-content: space-around;
   align-items: center;
   font-family: system-ui;
+  background-color: #282c34;
+  touch-action: none;
+  user-select: none;
+
 }
 
 @keyframes App-logo-spin {

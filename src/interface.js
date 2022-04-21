@@ -1,20 +1,25 @@
 import {useState} from "react";
 import styled from "styled-components";
+import  interact from "interactjs";
 
 import ExtendableList from "./extendableList";
 import DevicesDetails from "./components/devicesDetails";
 
 const S = {
     Wrapper: styled.div`
-    border: solid green;
     height: 800px;
     width: 1000px;
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    background-color: #ffffff;
+    background-color: #282c34;;
+    `,
+    DropZone: styled.div`
+    height: 500px;
+    width: 500px;
+    background-color: #000000;
     `
-}
+};
 
 const Interface = () => {
     const [clickedDevice, setClickedDevice] = useState(null);
@@ -22,6 +27,7 @@ const Interface = () => {
         <S.Wrapper>
             <ExtendableList setClickedDevice = {setClickedDevice} />
             {clickedDevice && <DevicesDetails device={clickedDevice} />}
+            {/* <S.DropZone  /> */}
         </S.Wrapper>       
     );
 };
