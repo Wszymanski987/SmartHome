@@ -18,7 +18,7 @@ import { DEVICES } from "./mock/devices";
       `   
   };
 
-  interact('ul')
+  interact('div')
     .draggable({
       onmove: function(event) {
         const target = event.target;

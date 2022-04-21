@@ -4,6 +4,7 @@ import  interact from "interactjs";
 
 import ExtendableList from "./extendableList";
 import DevicesDetails from "./components/devicesDetails";
+import DropZone from "./components/dropZone";
 
 const S = {
     Wrapper: styled.div`
@@ -13,12 +14,7 @@ const S = {
     flex-direction: row;
     align-items: flex-start;
     background-color: #282c34;;
-    `,
-    DropZone: styled.div`
-    height: 500px;
-    width: 500px;
-    background-color: #000000;
-    `
+    `    
 };
 
 const Interface = () => {
@@ -27,7 +23,7 @@ const Interface = () => {
         <S.Wrapper>
             <ExtendableList setClickedDevice = {setClickedDevice} />
             {clickedDevice && <DevicesDetails device={clickedDevice} />}
-            {/* <S.DropZone  /> */}
+            <DropZone  />
         </S.Wrapper>       
     );
 };
