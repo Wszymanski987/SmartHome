@@ -1,5 +1,5 @@
 import './App.css';
-import Interface from './interface';
+import Interface from './components/interface';
 
 function App() {
   return (

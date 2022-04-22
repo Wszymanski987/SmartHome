@@ -2,7 +2,7 @@ import interact from "interactjs";
 import styled from "styled-components";
 
 import { onMove } from "../methods/onMove";
-//import { useDropZone } from "./methods/useDropZone";
+import { DEVICES } from "../mock/devices";
 
 const S = {
     Wrapper: styled.div`
@@ -80,7 +80,7 @@ interact('.dropzone').dropzone({
             <S.Wrapper className="dropzone">
                 <h2>Device Details</h2>
                 <S.DropActive className="drop-active">
-                    <S.DropTarget className="drop-target"></S.DropTarget>
+                    <S.DropTarget className="drop-target"></S.DropTarget>                    
                 </S.DropActive>
             </S.Wrapper>
         );

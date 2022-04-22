@@ -1,10 +1,9 @@
 import {useState} from "react";
 import styled from "styled-components";
-import  interact from "interactjs";
 
 import ExtendableList from "./extendableList";
-import DevicesDetails from "./components/devicesDetails";
-import DropZone from "./components/dropZone";
+import DevicesDetails from "./devicesDetails";
+import DropZone from "./dropZone";
 
 const S = {
     Wrapper: styled.div`
@@ -23,7 +22,7 @@ const Interface = () => {
         <S.Wrapper>
             <ExtendableList setClickedDevice = {setClickedDevice} />
             {clickedDevice && <DevicesDetails device={clickedDevice} />}
-            <DropZone  />
+            <DropZone />
         </S.Wrapper>       
     );
 };

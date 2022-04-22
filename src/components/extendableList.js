@@ -2,7 +2,7 @@ import { useState } from "react";
 import styled from "styled-components";
 
 
-import Button from "./components/button";
+import Button from "./button";
 import Lists from "./list";
 
 
