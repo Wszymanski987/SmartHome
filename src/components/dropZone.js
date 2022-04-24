@@ -76,15 +76,19 @@ interact('.dropzone').dropzone({
     })
 
     const DropZone = () => {
+      const textContent = document.getElementsByClassName(".draggable")[0];
+
         return (
             <S.Wrapper className="dropzone">
                 <h2>Device Details</h2>
                 <S.DropActive className="drop-active">
-                    <S.DropTarget className="drop-target"></S.DropTarget>                    
+                    <S.DropTarget className="drop-target"></S.DropTarget>
+                         
                 </S.DropActive>
             </S.Wrapper>
         );
     };
     
+
     export default DropZone;
     
