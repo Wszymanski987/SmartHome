@@ -24,6 +24,7 @@ const Lists = ({ setClickedDevice }) => {
     <S.StyledList>
       {DEVICES.map((item, index) => (
         <S.StyledItemPosition className="draggable">
+          <span>dupa</span>
           <ul onClick={() => setClickedDevice(item)} key={index} >{item.name}</ul>
           
         </S.StyledItemPosition>
