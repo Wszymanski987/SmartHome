@@ -1,3 +1,4 @@
+import { createContext } from "react";
 import styled from "styled-components";
 
 import { DEVICES } from "../mock/devices";
@@ -20,12 +21,13 @@ import { DEVICES } from "../mock/devices";
   };
 
 const Lists = ({ setClickedDevice }) => {
+  const droppedElementContext = createContext("Dropped");
   return ( 
     <S.StyledList>
       {DEVICES.map((item, index) => (
-        <S.StyledItemPosition className="draggable">
-          <ul onClick={() => setClickedDevice(item)} key={index} >{item.name}</ul>
-          
+        <S.StyledItemPosition className="draggable" >
+          <ul onClick={() => setClickedDevice(item)} key={index} className={`item-${item.id}`} >{item.name}</ul>
+          droppedElementContext
         </S.StyledItemPosition>
       ))}
     </S.StyledList>   

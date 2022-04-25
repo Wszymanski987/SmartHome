@@ -1,7 +1,8 @@
 import interact from "interactjs";
+import { createContext } from "react";
 import styled from "styled-components";
 
-import { onMove } from "../methods/onMove";
+import { onMove, endMove } from "../methods/onMove";
 import { DEVICES } from "../mock/devices";
 
 const S = {
@@ -25,9 +26,11 @@ const S = {
     `
 };
 
+// const droppedElementContext;
+
 interact('.dropzone').dropzone({
     // only accept elements matching this CSS selector
-    accept: '.draggable',
+    accept: '.draggable' || `.item-1` || `.item-2` || `.item-3`,
     // Require a 75% element overlap for a drop to be possible
     overlap: 0.75,
   
@@ -54,6 +57,7 @@ interact('.dropzone').dropzone({
     },
     ondrop: function (event) {
       event.relatedTarget.textContent = 'Dropped'
+      // droppedElementContext = createContext("Dropped") 
     },
     ondropdeactivate: function (event) {
       // remove active dropzone feedback
@@ -72,18 +76,17 @@ interact('.dropzone').dropzone({
       ],
       autoScroll: true,
       // dragMoveListener from the dragging demo above
-      listeners: { move: onMove}
+      listeners: { move: onMove, end: endMove}
     })
 
     const DropZone = () => {
-      const textContent = document.getElementsByClassName(".draggable")[0];
 
         return (
             <S.Wrapper className="dropzone">
                 <h2>Device Details</h2>
                 <S.DropActive className="drop-active">
                     <S.DropTarget className="drop-target"></S.DropTarget>
-                         
+                    {/* {droppedElement.innerText === "Dropped" ? <span>tak</span> : <span>nie</span>} */}
                 </S.DropActive>
             </S.Wrapper>
         );

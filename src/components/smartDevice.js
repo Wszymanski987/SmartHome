@@ -35,7 +35,7 @@ let tab = [SmartBulb, SmartOutlet, SmartTemperatureSensor]
 
 const SmartDevice = () => {
     return (
-        <div>
+        <div className="">
             tab;
         </div>
     );
