@@ -1,7 +1,9 @@
-import { createContext } from "react";
 import styled from "styled-components";
+// import { useState } from "react";
 
 import { DEVICES } from "../mock/devices";
+// import { DroppedElementContext } from "../methods/createContext";
+// import { onMove } from "../methods/onMove";
 
 
   const S = {
@@ -21,13 +23,14 @@ import { DEVICES } from "../mock/devices";
   };
 
 const Lists = ({ setClickedDevice }) => {
-  const droppedElementContext = createContext("Dropped");
+  // const [state, setState] = useState(false)
+
   return ( 
     <S.StyledList>
       {DEVICES.map((item, index) => (
         <S.StyledItemPosition className="draggable" >
           <ul onClick={() => setClickedDevice(item)} key={index} className={`item-${item.id}`} >{item.name}</ul>
-          droppedElementContext
+
         </S.StyledItemPosition>
       ))}
     </S.StyledList>   

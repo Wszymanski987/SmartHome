@@ -1,5 +1,7 @@
 import interact from "interactjs";
 
+// import { DropZone } from "../components/dropZone";
+
 // target elements with the "draggable" class
 interact('.draggable')
   .draggable({
@@ -19,7 +21,7 @@ interact('.draggable')
       move: onMove,
 
       // call this function on every dragend event
-      end: endMove,
+      //end: endMove,
     }
   })
 
@@ -37,9 +39,7 @@ export function  onMove (event) {
   target.setAttribute('data-y', y)
 }
 
-export function endMove (event) {
-   var textEl = "dupa";
-    if(event.relatedTarget.textContext === 'Dropped') {
-      return textEl;
-    }
-  }
+// export function endMove (event) {
+//    if(DropZone.)
+  
+//   }
