@@ -5,38 +5,40 @@ import { DEVICES } from "../mock/devices";
 // import { DroppedElementContext } from "../methods/createContext";
 // import { onMove } from "../methods/onMove";
 
-
-  const S = {
-    StyledList: styled.li`
+const S = {
+  StyledList: styled.li`
     color: black;
     background-color: red;
-    `,
-    StyledItemPosition: styled.div`
+  `,
+  StyledItemPosition: styled.div`
     border: solid black;
     cursor: pointer;
     tranistion: 1s;
     :hover {
-        opacity: 0.8;
-    };
+      opacity: 0.8;
+    }
     transform: translate(0px, 0px);
-      `   
-  };
+  `,
+};
 
 const Lists = ({ setClickedDevice }) => {
   // const [state, setState] = useState(false)
 
-  return ( 
+  return (
     <S.StyledList>
       {DEVICES.map((item, index) => (
-        <S.StyledItemPosition className="draggable" >
-          <ul onClick={() => setClickedDevice(item)} key={index} className={`item-${item.id}`} >{item.name}</ul>
-
+        <S.StyledItemPosition className={`draggable${item.id}`}>
+          <ul
+            onClick={() => setClickedDevice(item)}
+            key={index}
+            className={`item-${item.id}`}
+          >
+            {item.name}
+          </ul>
         </S.StyledItemPosition>
       ))}
-    </S.StyledList>   
-    
+    </S.StyledList>
   );
 };
 
 export default Lists;
-
